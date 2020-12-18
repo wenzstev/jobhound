@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react"
 
+import {BrowserRouter as Router} from "react-router-dom"
+
 import Modal from "react-modal"
 
 import axios from "axios"
 
-import ChangeLog from "./ChangeModal"
+import ChangeLog from "./special-components/ChangeModal"
+import Sidebar from "./special-components/Sidebar"
 
 axios.defaults.baseURL = "/api"
 
@@ -21,9 +24,9 @@ const Main = () => {
 
   return (
     <div>
-      <h1>And now, an important message from the backend:</h1>
-      <h2>{message ? message: "Loading..."}</h2>
-
+      <Router>
+      <Sidebar />
+      </Router>
       <ChangeLog />
     </div>
     )

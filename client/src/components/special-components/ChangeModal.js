@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from "react"
 
-import {useLocalStorage} from "../useLocalStorage"
+import {useLocalStorage} from "../../useLocalStorage"
 
 import ReactMarkdown from "react-markdown"
 
-import DefaultButton from "./base-components/DefaultButton"
-import DefaultModal from "./base-components/DefaultModal"
+import DefaultButton from "../base-components/DefaultButton"
+import DefaultModal from "../base-components/DefaultModal"
 
-import {CenterContainer} from "./base-components/Utilities"
+import {CenterContainer} from "../base-components/Utilities"
 
-import markdown from "../changelog/0.0.1.md"
+import markdown from "../../changelog/0.0.1.md"
 
 const version = "0.0.2"
 
