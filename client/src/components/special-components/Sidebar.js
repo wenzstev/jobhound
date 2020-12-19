@@ -5,19 +5,20 @@ import SidebarButton from "./SidebarButton"
 
 const StyledDiv = styled.div
 `
-position: fixed;
 top: 0;
 left: 0;
-width: 30vw;
+width: 150px;
 height: 100vh;
 background-color: whitesmoke;
 border-right: 2px solid lightgray;
 `
 
 const buttons = [
+    "Home",
     "Jobs",
     "Calendar",
-    "Cover Letters"
+    "Cover Letters",
+    "Profile"
 ]
 
 const SideBar = () => {

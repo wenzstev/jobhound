@@ -11,7 +11,7 @@ import {CenterContainer} from "../base-components/Utilities"
 
 import markdown from "../../changelog/0.0.1.md"
 
-const version = "0.0.2"
+const version = "0.0.3"
 
 
 
@@ -33,7 +33,7 @@ const ChangeModal = () => {
                 .then(text=>{
                     setModalContents(text)
                     openModal()
-                    //setLastAccessed(version)
+                    setLastAccessed(version)
                 })
         }
     }, [])

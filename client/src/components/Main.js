@@ -1,16 +1,24 @@
 import React, {useState, useEffect} from "react"
 
-import {BrowserRouter as Router} from "react-router-dom"
+import styled from "styled-components"
 
-import Modal from "react-modal"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+
+import Homepage from "./pages/Homepage/"
+import JobsPage from "./pages/JobsPage"
 
 import axios from "axios"
 
 import ChangeLog from "./special-components/ChangeModal"
 import Sidebar from "./special-components/Sidebar"
 
-axios.defaults.baseURL = "/api"
+import {FlexContainer, PageContainer} from "./base-components/Utilities"
 
+axios.defaults.baseURL = "/api"
 
 const Main = () => {
   const [message, setMessage] = useState("")
@@ -25,7 +33,20 @@ const Main = () => {
   return (
     <div>
       <Router>
-      <Sidebar />
+        <FlexContainer>
+        <Sidebar />
+        <PageContainer>
+        <Switch>
+          <Route path="/home">
+            <Homepage />
+          </Route>
+          <Route path="/jobs">
+            <JobsPage />
+          </Route>
+        </Switch>
+        </PageContainer>
+        </FlexContainer>
+
       </Router>
       <ChangeLog />
     </div>
